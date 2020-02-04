@@ -4,6 +4,7 @@ import SearchBox from '../component/SearchBox'
 import Scroll from '../component/Scroll'
 import ErrorBoundry from '../component/ErrorBoundry'
 import './App.css'
+import { setSearchField } from '../action'
 
 class App extends Component {
   constructor() {
