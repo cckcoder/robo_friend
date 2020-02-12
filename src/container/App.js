@@ -6,7 +6,6 @@ import Scroll from '../component/Scroll'
 import ErrorBoundry from '../component/ErrorBoundry'
 import './App.css'
 import { setSearchField } from '../action'
-<<<<<<< HEAD
 
 const mapStatetoProps = state => {
   return {
@@ -19,8 +18,6 @@ const mapDispatchToProps = (dispatch) => {
     onSearchChange: (event) => dispatch(setSearchField(event.target.value))
   }
 }
-=======
->>>>>>> master
 
 class App extends Component {
   constructor() {
