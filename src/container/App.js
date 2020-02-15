@@ -25,7 +25,6 @@ const mapDispatchToProps = (dispatch) => {
 
 class App extends Component {
   componentDidMount() {
-    console.log(this.props)
     this.props.onRequestRobots()
   }
 
@@ -35,11 +34,7 @@ class App extends Component {
     const filteredRobots = robots.filter(robot => {
       return robot.name.toLowerCase().includes(searchField.toLowerCase())
     })
-
-    if (! isPending) {
-      return <h1>Loading</h1>
-    } else {
-      return (
+    return isPending ? <h1>Loading...</h1> :
         <div className='tc'>
           <h1 className='f2'>RoboFriends</h1>
           <SearchBox searchChange={onSearchChange}/>
@@ -49,8 +44,6 @@ class App extends Component {
             </ErrorBoundry>
           </Scroll>
         </div>
-      )
-    }
   }
 }
 
